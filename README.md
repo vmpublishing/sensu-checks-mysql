@@ -1,10 +1,10 @@
 ## Sensu-Plugins-mysql
 
-[ ![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-mysql.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-mysql)
-[![Gem Version](https://badge.fury.io/rb/sensu-plugins-mysql.svg)](http://badge.fury.io/rb/sensu-plugins-mysql)
-[![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-mysql/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-mysql)
-[![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-mysql/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-mysql)
-[![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-mysql.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-mysql)
+[ ![Build Status](https://travis-ci.org/sensu-plugins/sensu-checks-mysql.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-checks-mysql)
+[![Gem Version](https://badge.fury.io/rb/sensu-checks-mysql.svg)](http://badge.fury.io/rb/sensu-checks-mysql)
+[![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-checks-mysql/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-checks-mysql)
+[![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-checks-mysql/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-checks-mysql)
+[![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-checks-mysql.svg)](https://gemnasium.com/sensu-plugins/sensu-checks-mysql)
 
 ## Functionality
 
@@ -47,7 +47,7 @@
 [Installation and Setup](http://sensu-plugins.io/docs/installation_instructions.html)
 
 ## Notes
-The ruby executables are install in path similar to `/opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugins-mysql-0.0.4/bin`
+The ruby executables are install in path similar to `/opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-checks-mysql-0.0.4/bin`
 
 ## Troubleshooting
 When used in `chef`, if the dependencies are missing, an error may abort the chef-client run: 
@@ -64,6 +64,6 @@ package "libmysqlclient-dev" do
   action :install
 end
 
-sensu_gem 'sensu-plugins-mysql' do version '0.0.4' end
+sensu_gem 'sensu-checks-mysql' do version '0.0.4' end
 
 ```

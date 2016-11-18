@@ -2,14 +2,13 @@ require 'bundler/gem_tasks'
 require 'github/markup'
 require 'redcarpet'
 require 'rspec/core/rake_task'
-require 'rubocop/rake_task'
 require 'yard'
 require 'yard/rake/yardoc_task'
 
 desc 'Don\'t run Rubocop for unsupported versions'
 begin
   args = if RUBY_VERSION >= '2.0.0'
-           [:spec, :make_bin_executable, :yard, :rubocop, :check_binstubs]
+           [:spec, :make_bin_executable, :yard, :check_binstubs]
          else
            [:spec, :make_bin_executable, :yard]
          end
@@ -34,7 +33,7 @@ end
 
 desc 'Test for binstubs'
 task :check_binstubs do
-  bin_list = Gem::Specification.load('sensu-plugins-mysql.gemspec').executables
+  bin_list = Gem::Specification.load('sensu-checks-mysql.gemspec').executables
   bin_list.each do |b|
     `which #{ b }`
     unless $CHILD_STATUS.success?

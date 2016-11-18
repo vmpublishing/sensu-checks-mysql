@@ -1,4 +1,4 @@
-module SensuPluginsMySql
+module SensuChecksMySql
   module Version
     MAJOR = 0
     MINOR = 1
