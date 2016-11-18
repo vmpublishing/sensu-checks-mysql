@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   # s.signing_key            = File.expand_path(pvt_key) if $PROGRAM_NAME =~ /gem\z/
   s.summary                = 'Sensu plugins for MySql'
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
-  s.version                = SensuPluginsMySql::Version::VER_STRING
+  s.version                = SensuChecksMySql::Version::VER_STRING
 
   s.add_runtime_dependency 'inifile', '3.0.0'
   s.add_runtime_dependency 'mysql2', '0.3.18'
