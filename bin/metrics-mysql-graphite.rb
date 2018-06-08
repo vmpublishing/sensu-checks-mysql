@@ -271,14 +271,16 @@ class MysqlGraphiteMetrics < Sensu::Plugin::Metric::CLI::Graphite
 
 
   def run
+    result = ok
     connect
     run_test
   rescue Mysql2::Error => e
-    critical e.message
+    result = e.message
   rescue => e
-    critical "UNKNOWN: #{e.message}\n\n#{e.backtrace.join('\n')}"
+    result = "UNKNOWN: #{e.message}\n\n#{e.backtrace.join('\n')}"
   ensure
     @client.close if @client
+    result
   end
 
 end
